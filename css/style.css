@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&family=Roboto:wght@500&display=swap");
+:root {
+  --pr-color: #0a993c;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: white;
+}
+
+/* navbar */
+nav {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-color: rgba(230, 230, 230, 0.85);
+}
+.nav-link {
+  font-size: 20px;
+}
+.nav-link.active {
+  font-weight: 700;
+}
+/* .btn.btn-outline-success {
+  font-size: 20px;
+  background-color: #579bb1;
+} */
+
+#hero p {
+  margin-top: 20px;
+}
+.btn.btn-success {
+  margin-top: 60px;
+}
+.carousel-caption {
+  width: 720px;
+  height: 300px;
+}
+
+/* profil */
+#profil {
+  margin-top: 20px;
+}
+
+/* About us */
+.card,
+#AboutUs .card {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+#AboutUs .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #f3f4f5;
+}
+
+#alamat .card-body {
+  width: 224px;
+}
+
+#alamat h3 {
+  color: #0a993c;
+}
+
+/* artikel */
+#artikel {
+  margin-top: 100px;
+}
+
+#artikel .card {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+/* ustadz */
+#ustadz {
+  margin-top: 200px;
+}
+#ustadz .card {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+}
+#ustadz img {
+  border-radius: 10px;
+}
+
+/* berita */
+#berita {
+  margin-top: 100px;
+}
+
+#berita .pagination li a:hover {
+  background-color: #0a993c;
+  color: aliceblue;
+}
+
+#berita .card {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+/* daftar */
+
+#daftar .row {
+  margin-top: 150px;
+}
+
+#daftar .card {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#daftar .card-title {
+  margin-top: 100px;
+}
+#daftar .card-text {
+  margin-top: 10px;
+}
+
+/* kontak */
+header.masthead {
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 4.5rem);
+  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../Asset/Img/alqur'an.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 500px;
+}
+header.masthead h1,
+header.masthead .h1 {
+  font-size: 2.25rem;
+}
+@media (min-width: 992px) {
+  header.masthead {
+    height: 100vh;
+    min-height: 40rem;
+    padding-top: 4.5rem;
+    padding-bottom: 0;
+  }
+  header.masthead p {
+    font-size: 1.15rem;
+  }
+  header.masthead h1,
+  header.masthead .h1 {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 1200px) {
+  header.masthead h1,
+  header.masthead .h1 {
+    font-size: 3.5rem;
+  }
+}
+
+#contact .card {
+  color: #444444;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+  padding: 20px 0 30px 0;
+}
+
+#contact .card i {
+  font-size: 32px;
+  color: #cc1616;
+  border-radius: 50%;
+  padding: 8px;
+  border: 2px dotted #f5a0a0;
+}
+
+#contact .card h3 {
+  font-size: 20px;
+  color: #777777;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+#contact .card p {
+  padding: 0;
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}

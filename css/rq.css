@@ -1,0 +1,113 @@
+/* navbar */
+.nav-link:hover {
+}
+
+/* jumbotron */
+.jumbotron {
+  margin-top: 7rem;
+  padding-top: 2rem;
+}
+#rq {
+  background-color: #ebd9c8;
+}
+#rq h1,
+#rq p {
+  color: #003f5a;
+}
+#rq .btn {
+  background-color: #de6600;
+  border: none;
+}
+
+/* about */
+.about {
+  background-color: #f3f4f5;
+}
+
+/* program */
+#program {
+  color: #003f5a;
+}
+
+#program img {
+  border: 7px solid gray;
+  border-radius: 25px;
+}
+#program img:hover {
+  border: 7px solid #fea02f;
+}
+
+#program .card {
+  background-color: #ebd9c8;
+  border: none;
+}
+
+#program .tahfidz {
+  border-bottom: 3px solid green;
+}
+
+#program .tajwid {
+  border-bottom: 3px solid blue;
+}
+
+#program .tartil {
+  border-bottom: 3px solid yellow;
+}
+
+#program .tafsir {
+  border-bottom: 3px solid red;
+}
+
+/* news */
+#news {
+  background-color: #f3f4f5;
+}
+
+#news .card,
+#news .card img {
+  border-radius: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+#news .card img {
+  height: 200px;
+  overflow: hiddens;
+}
+
+#news .card-text {
+  height: 100px;
+  overflow: hidden;
+}
+
+#news .btn {
+  background-color: #de6600;
+  border: none;
+}
+
+#news .line1 {
+  border-bottom: 3px solid green;
+}
+#news .line2 {
+  border-bottom: 3px solid red;
+}
+#news .line3 {
+  border-bottom: 3px solid yellow;
+}
+#news .line4 {
+  border-bottom: 3px solid blue;
+}
+#news .line5 {
+  border-bottom: 3px solid purple;
+}
+#news .line6 {
+  border-bottom: 3px solid orangered;
+}
+
+/* contact */
+#contact {
+  background-color: #ebd9c8;
+  color: #003f5a;
+}
+
+section {
+  padding-top: 7rem;
+}
