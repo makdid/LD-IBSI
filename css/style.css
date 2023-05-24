@@ -19,11 +19,8 @@ nav {
 .nav-link.active {
   font-weight: 700;
 }
-/* .btn.btn-outline-success {
-  font-size: 20px;
-  background-color: #579bb1;
-} */
 
+/* hero/jumbotron */
 #hero p {
   margin-top: 20px;
 }
@@ -176,4 +173,19 @@ header.masthead .h1 {
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
+}
+
+/* footer */
+#footer .btn {
+  transition: all 0.3s ease-in;
+}
+#footer .btn:hover {
+  transform: rotate(360deg);
+  border-radius: 100%;
+}
+#footer .fab {
+  transition: all 0.3s ease-out;
+}
+#footer .fab:hover {
+  transform: scale(1.2);
 }
