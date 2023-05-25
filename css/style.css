@@ -20,7 +20,6 @@ nav .nav-link:hover {
 }
 nav .nav-link:active {
   background-color: #cc1616;
-  color: #f3f4f5;
 }
 .nav-link {
   font-size: 20px;
