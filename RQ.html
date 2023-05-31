@@ -56,12 +56,14 @@
     <!-- Jumbotron -->
     <section id="rq">
       <div class="jumbotron d-flex justify-content-center gap-5">
-        <div class="col-md-6 lh-lg">
+        <div class="col-md-6 lh-lg ms-5 ps-5">
           <h1 class="display-4 fw-bold">Tebar Quran untuk Indonesiaku</h1>
           <p class="lead fs-4 fw-bold">Salah satu program dari Rumah Quran Ibnu Sina.</p>
           <a class="btn btn-primary btn-lg" href="#" role="button">INFORMASI</a>
         </div>
-        <img src="Asset/Img/quran1.jpg" class="rounded img-fluid" alt="al-quran" />
+        <div class="col-md-6">
+          <img src="Asset/Img/quran1.jpg" class="rounded img-fluid" alt="al-quran" />
+        </div>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
@@ -82,9 +84,9 @@
           </div>
         </div>
         <div class="row justify-content-center gap-2">
-          <div class="col-md-3">
-            <h3 class="text-end">Visi</h3>
-            <p class="text-end fs-3">Menyelenggarakan pendidikan untuk mewujudkan generasi emas islam masa depan yang memiliki iman kuat, mencintai al Qur’an dan as Sunnah.</p>
+          <div class="col-md-3 text-end">
+            <h3 class="text-sm-center">Visi</h3>
+            <p class="text-sm-center fs-3">Menyelenggarakan pendidikan untuk mewujudkan generasi emas islam masa depan yang memiliki iman kuat, mencintai al Qur’an dan as Sunnah.</p>
           </div>
           <div class="col-md-4 text-center">
             <p>
@@ -94,7 +96,7 @@
             </p>
           </div>
           <div class="col-md-3">
-            <h3>Misi</h3>
+            <h3 class="text-center">Misi</h3>
             <ol>
               <li>Menyelenggarakan pendidikan fokus pada pembentukan iman, cinta al Qur’an dan as Sunnah, dan Akhlak sejak usia dini.</li>
               <li>Membina peserta didik secara bertahap dan berjenjang sesuai usia dan tahapan perkembangan.</li>
@@ -291,20 +293,28 @@
             </div>
           </div>
           <div class="col-md-4">
-            <form>
+            <div class="alert alert-primary alert-dismissible fade show d-none my-alert" role="alert">
+              <strong>Terimakasih!</strong> Pesan anda sudah kami terima.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <form name="ldibsi-contact-form">
               <div class="mb-3">
                 <label for="name" class="form-label">Nama Lengkap</label>
-                <input type="text" class="form-control" id="name" aria-describedby="name" />
+                <input type="text" class="form-control" id="name" aria-describedby="name" name="nama" />
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" aria-describedby="email" />
+                <input type="email" class="form-control" id="email" aria-describedby="email" name="email" />
               </div>
               <div class="mb-3">
                 <label for="pesan" class="form-label">Pesan</label>
-                <textarea class="form-control" id="pesan" rows="3"></textarea>
+                <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
               </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-primary btn-submit">Submit</button>
+              <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Loading...
+              </button>
             </form>
           </div>
         </div>
@@ -362,5 +372,33 @@
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+      const scriptURL = "https://script.google.com/macros/s/AKfycbytyWDAJN76xquQx_HIdUNi2jp2-37QU5c8HaffHrr70s2SwG9TqgELwIz-uLnn7ZEGdw/exec";
+      const form = document.forms["ldibsi-contact-form"];
+      const btnSubmit = document.querySelector(".btn-submit");
+      const btnLoading = document.querySelector(".btn-loading");
+      const myAlert = document.querySelector(".my-alert");
+
+      // ketika tombol submit di klik
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        // tampilkan tombol loading, hilangkan tombol kirim
+        btnLoading.classList.toggle("d-none");
+        btnSubmit.classList.toggle("d-none");
+
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            // tampilkan tombol kirim, hilangkan tombol loading
+            btnLoading.classList.toggle("d-none");
+            btnSubmit.classList.toggle("d-none");
+            // tampilkan alert
+            myAlert.classList.toggle("d-none");
+            // reset form
+            form.reset();
+            console.log("Success!", response);
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
   </body>
 </html>
